@@ -15,8 +15,6 @@ function goBtnClicked() {
     displayStartLetter();
   } else if (selection === "includes") {
     displayIncludes();
-  } else if (selection === "search") {
-    searchForColor();
   }
 }
 
@@ -34,9 +32,4 @@ function displayStartLetter() {
 // Display all colors that include provided substring
 function displayIncludes() {
   console.log("Colors that Include...");
-}
-
-// Search for a provided color
-function searchForColor() {
-  console.log("Search for a Color...");
 }
