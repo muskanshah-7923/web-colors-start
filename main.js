@@ -1,5 +1,20 @@
 // WEB COLORS START
 
+// Global Valuable
+let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "maroon", "pink", "cyan"]; 
+
+
+//HTML Varoables
+let outputEl = document.getElementById("container");
+
+// Event Listener on the Update Button
+document.getElementById("updtae-btn").addEventListener("click" , updateColors)
+function updateColors() {
+  //Inputs
+  let colorsStr = document.getElementById("colors-in").value;
+console.log(colorsStr);
+}
+
 // Event Listener on Go Button
 document.getElementById("go-btn").addEventListener("click", goBtnClicked);
 
@@ -22,6 +37,11 @@ function goBtnClicked() {
 // Display All Colors
 function displayAll() {
   console.log("Display All Colors");
+  outputEl.innerHTML = "<h2>DISPLAY ALL<h2>"
+
+for (let color of colors) {
+  outputEl.innerHTML += `<h4 style="color:${color}">${color}</h4>`;
+}
 }
 
 // Display all Colors with prompted Starting Letter
