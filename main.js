@@ -1,18 +1,21 @@
 // WEB COLORS START
 
 // Global Valuable
-let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "maroon", "pink", "cyan"]; 
+let colors = await loadTextFile("web-colors.txt"); 
 
 
 //HTML Varoables
 let outputEl = document.getElementById("container");
 
 // Event Listener on the Update Button
-document.getElementById("updtae-btn").addEventListener("click" , updateColors)
+document.getElementById("update-btn").addEventListener("click" , updateColors)
 function updateColors() {
   //Inputs
   let colorsStr = document.getElementById("colors-in").value;
 console.log(colorsStr);
+
+// Update colors array
+colors = colorsStr.split(" ");
 }
 
 // Event Listener on Go Button
